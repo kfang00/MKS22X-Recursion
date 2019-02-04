@@ -49,6 +49,15 @@ public class Recursion{
       return hold;
     }
 
+    private static ArrayList<Integer> mASH(int n, int sum) {
+      ArrayList<Integer> hold = new ArrayList<Integer>();
+      if (n == 0) {
+	hold.add(sum);
+      }
+      return mASH(n - 1, sum + n);
+      return mASH(n - 1, sum);
+    }
+
 public static void main(String[] args) {
         System.out.println("sqrt()");
         System.out.println("-----------------------\n");
