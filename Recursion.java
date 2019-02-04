@@ -41,12 +41,10 @@ public class Recursion{
     }
 
     /*As Per classwork*/
-    public static ArrayList<Integer> makeAllSums(){
+    public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> hold = new ArrayList<Integer>();
       return hold;
     }
-
-}
 
 public static void main(String[] args) {
         System.out.println("sqrt()");
@@ -108,3 +106,7 @@ public static void main(String[] args) {
         System.out.println("EXPECTED: [0, 3, 2, 5, 1, 4, 3, 6]");
         System.out.println(makeAllSums(3));           // [0, 3, 2, 5, 1, 4, 3, 6]
 }
+
+}
+
+
