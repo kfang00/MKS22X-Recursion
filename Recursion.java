@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Recursion{
     /*You may write additional private methods */
 
@@ -7,11 +9,11 @@ public class Recursion{
 
     */
     public static double sqrt(double n, double tolerance){
-      return sqrtH(n, tolerance, 1);
+      return sqrtH(n, tolerance, 1.0);
     }
 
     private static double sqrtH(double n, double tolerance, double guess){
-      if (Math.abs((guess * guess) - n) < (tolerance * n) {
+      if (Math.abs((guess * guess) - n) < (tolerance * n)) {
 	return guess;
       }
       return sqrtH(n, tolerance, (((n / guess) + guess) / 2));
@@ -22,11 +24,13 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-
+      return 0;
     }
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
+      ArrayList<Integer> hold = new ArrayList<Integer>();
+      return hold;
     }
 
 }
