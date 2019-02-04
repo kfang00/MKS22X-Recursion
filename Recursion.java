@@ -7,7 +7,7 @@ public class Recursion{
 
     */
     public static double sqrt(double n, double tolerance){
- 
+      return sqrtH(n, tolerance, 1);
     }
 
     private static double sqrtH(double n, double tolerance, double guess){
