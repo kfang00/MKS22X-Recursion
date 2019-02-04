@@ -16,6 +16,9 @@ public class Recursion{
       if (Math.abs((guess * guess) - n) < (tolerance * n)) {
 	return guess;
       }
+      if (n == 0) {
+	return 0;
+      }
       return sqrtH(n, tolerance, (((n / guess) + guess) / 2));
     }
 
@@ -24,10 +27,10 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      return fibH(n, 0);
+      return fibH(n, 0, 1);
     }
 
-    private static int fibH(int n, int sum){
+    private static int fibH(int n, int sum1, int sum2){
       if (n == 0) {
 	return 0;
       }
@@ -35,7 +38,7 @@ public class Recursion{
 	return 1;
       }
       if (n > 1) {
-	return fibH((n - 1), sum );
+	return fibH((n - 1), sum1, sum1 + sum2 );
       }
       return n;
     }
