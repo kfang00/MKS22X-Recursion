@@ -45,20 +45,19 @@ public class Recursion{
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
-      return mASH(n);
+      ArrayList<Integer> hold = new ArrayList<Integer>();
+      return mASH(n, 0, hold);
     }
 
-    private static ArrayList<Integer> mASH(int n, int sum) {
-      int a = 1;
-      ArrayList<Integer> hold = new ArrayList<Integer>();
+    private static ArrayList<Integer> mASH(int n, int sum, ArrayList<Integer> h) {
       if (n == 0) {
-	hold.add(sum);
+	h.add(sum);
       }
-      if (a == 1) {
-	return mASH(n - 1, sum + n);
+      if (n > 0) {
+	mASH(n - 1, sum + n, h);
+        mASH(n - 1, sum, h);
       }
-      a = 0;
-      return mASH(n - 1, sum);
+      return h;
     }
 
 public static void main(String[] args) {
