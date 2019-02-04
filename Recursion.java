@@ -7,7 +7,14 @@ public class Recursion{
 
     */
     public static double sqrt(double n, double tolerance){
+ 
+    }
 
+    private static double sqrtH(double n, double tolerance, double guess){
+      if (Math.abs((guess * guess) - n) < (tolerance * n) {
+	return guess;
+      }
+      return sqrtH(n, tolerance, (((n / guess) + guess) / 2));
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
