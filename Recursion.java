@@ -24,7 +24,7 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      return 0;
+      return fibH(n, 0);
     }
 
     private static int fibH(int n, int sum){
@@ -35,7 +35,7 @@ public class Recursion{
 	return 1;
       }
       if (n > 1) {
-	return sum + fib(n, sum + n);
+	return sum + fibH(n, sum + n);
       }
       return n;
     }
