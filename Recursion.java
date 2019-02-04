@@ -27,6 +27,19 @@ public class Recursion{
       return 0;
     }
 
+    private static int fib(int n, int sum){
+      if (n == 0) {
+	return 0;
+      }
+      if (n == 1) {
+	return 1;
+      }
+      if (n > 1) {
+	return fib(n - 2) + fib(n - 1);
+      }
+      return n;
+    }
+
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
       ArrayList<Integer> hold = new ArrayList<Integer>();
@@ -34,3 +47,4 @@ public class Recursion{
     }
 
 }
+
