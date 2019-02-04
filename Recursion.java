@@ -32,13 +32,13 @@ public class Recursion{
 
     private static int fibH(int n, int sum1, int sum2){
       if (n == 0) {
-	return 0;
+	return sum1;
       }
       if (n == 1) {
-	return 1;
+	return sum2;
       }
       if (n > 1) {
-	return fibH((n - 1), sum1, sum1 + sum2 );
+	return fibH((n - 1), sum2, sum1 + sum2 );
       }
       return n;
     }
