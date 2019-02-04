@@ -27,7 +27,7 @@ public class Recursion{
       return 0;
     }
 
-    private static int fib(int n, int sum){
+    private static int fibH(int n, int sum){
       if (n == 0) {
 	return 0;
       }
@@ -35,7 +35,7 @@ public class Recursion{
 	return 1;
       }
       if (n > 1) {
-	return fib(n - 2) + fib(n - 1);
+	return sum + fib(n, sum + n);
       }
       return n;
     }
